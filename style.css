@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 .container {
@@ -9,8 +8,9 @@
     display: grid;
     /* grid-template-columns: repeat(16, 1fr); */
     width: 320px;
+    border: 1px solid gainsboro;
 }
 
 .grid_item {
-    background-color: red;
+    background-color: white;
 }
