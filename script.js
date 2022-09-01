@@ -6,8 +6,13 @@ const container = document.querySelector(".container");
 let gridItem;
 
 function getGridAmount() {
-    const gridAmount = parseInt(prompt("How many fields wide do you want your canvas?"));
-    return gridAmount;
+    const gridAmount = parseInt(prompt(`How many fields wide do you want your canvas? \nEnter a number between 1 - 100`));
+    if (gridAmount > 100) {
+        alert("Please enter a number of 100 or below!");
+        getGridAmount();
+    } else {
+        return gridAmount;
+    }
 }
 
 let gridAmount = getGridAmount();
@@ -19,7 +24,7 @@ for (let i = 0; i < gridAmount * gridAmount; i++) {
     container.append(gridItem);
 }
 
-
+// Determines the grid-template-columns for .container and width & height for .grid_item
 function itemSize() {
     const container = document.querySelector('.container');
     const squares = document.querySelectorAll('.grid_item');
@@ -39,8 +44,6 @@ function itemSize() {
 itemSize();
 }
 
-
-
 // Function changing style of the grid items when you hover the mouse over them
 function gridHover() {
     const grid = document.querySelectorAll('.grid_item');
@@ -56,4 +59,3 @@ function gridHover() {
 // Calls the functions as soon as the page is loaded
 createGrid();
 gridHover();
-
