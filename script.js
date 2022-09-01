@@ -50,7 +50,7 @@ function gridHover() {
 
     grid.forEach((square) => {
         square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = "black";
+            square.style.backgroundColor = "#03d543";
         })
     })
 
