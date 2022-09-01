@@ -1,3 +1,4 @@
+function createGrid() {
 // Selecting the container div
 const container = document.querySelector(".container");
 
@@ -10,3 +11,6 @@ for (let i = 0; i < 256; i++) {
     gridItem.className = "grid_item";
     container.append(gridItem);
 }
+}
+
+createGrid();
