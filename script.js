@@ -18,7 +18,28 @@ for (let i = 0; i < gridAmount * gridAmount; i++) {
     gridItem.className = "grid_item";
     container.append(gridItem);
 }
+
+
+function itemSize() {
+    const container = document.querySelector('.container');
+    const squares = document.querySelectorAll('.grid_item');
+
+    container.style.gridTemplateColumns = `repeat(${gridAmount}, 1fr)`;
+
+     let squareSize = 320/gridAmount;
+
+     squares.forEach((square) => {
+        square.style.width = `${squareSize}px`;
+     });
+     squares.forEach((square) => {
+        square.style.height = `${squareSize}px`;
+     })
 }
+
+itemSize();
+}
+
+
 
 // Function changing style of the grid items when you hover the mouse over them
 function gridHover() {

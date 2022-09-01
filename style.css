@@ -5,15 +5,12 @@
 }
 
 .container {
-    width: 335px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    gap: 1px;
+    /* grid-template-columns: repeat(16, 1fr); */
+    width: 320px;
 }
 
 .grid_item {
-    width: 20px;
-    height: 20px;
     background-color: red;
 }
