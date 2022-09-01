@@ -13,4 +13,18 @@ for (let i = 0; i < 256; i++) {
 }
 }
 
+function gridHover() {
+    const grid = document.querySelectorAll('.grid_item');
+
+    grid.forEach((square) => {
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = "black";
+        })
+    })
+
+}
+
+// Calls the functions as soon as the page is loaded
 createGrid();
+gridHover();
+
